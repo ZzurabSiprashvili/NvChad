@@ -8,7 +8,7 @@ o.showmode = false
 
 o.clipboard = "unnamedplus"
 o.cursorline = true
-o.cursorlineopt = "number"
+o.cursorlineopt = "both"
 
 -- Indenting
 o.expandtab = true
@@ -23,6 +23,7 @@ o.smartcase = true
 o.mouse = "a"
 
 -- Numbers
+o.relativenumber = true
 o.number = true
 o.numberwidth = 2
 o.ruler = false
