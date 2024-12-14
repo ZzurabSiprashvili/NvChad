@@ -81,6 +81,23 @@ return {
       return require "nvchad.configs.gitsigns"
     end,
   },
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = false,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    keys = function()
+      return require "nvchad.configs.lazygit"
+    end,
+  },
 
   -- lsp stuff
   {
