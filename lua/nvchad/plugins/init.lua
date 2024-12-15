@@ -77,8 +77,21 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     event = "User FilePost",
-    opts = function()
-      return require "nvchad.configs.gitsigns"
+    opts = {
+      signs = {
+        delete = { text = "󰍵" },
+        changedelete = { text = "󱕖" },
+      },
+    },
+    config = function()
+      require("gitsigns").setup {
+        current_line_blame = true, -- Show git blame for the current line
+        current_line_blame_opts = {
+          delay = 300, -- Delay in ms before blame appears
+          virt_text_pos = "eol", -- Show text at the end of the line
+        },
+        current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>",
+      }
     end,
   },
   {
