@@ -2,7 +2,6 @@ dofile(vim.g.base46_cache .. "telescope")
 
 return {
   defaults = {
-    path_display = { "shorten" },
     prompt_prefix = "   ",
     selection_caret = " ",
     entry_prefix = " ",
